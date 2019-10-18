@@ -10,18 +10,9 @@
  *
 
 """
-from POS import POStagger
+from QuestionAnalysis import POStagger
 import nltk
-from Parsing import Chunking
-
-
-def questionAnalysis(question_text):
-    pos = {'Q': [], 'V': [], 'FN': []}
-    Arbol = Chunking(question_text)
-    for subarbol in Arbol.subtrees():
-        if subarbol.label() != 'S':
-            pos[subarbol.label()] += subarbol.leaves()
-    return pos
+from QuestionAnalysis import questionAnalysis
 
 
 def main():
@@ -35,6 +26,8 @@ def main():
 
     # Question Analysis
     pos = questionAnalysis(input("Pregunte: "))
+    # Document Retrieval
+
 
 
 
