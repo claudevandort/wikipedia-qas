@@ -16,17 +16,11 @@ def scrape(queue):
         try:
             links = wikipedia.page(title).links
             summary = wikipedia.summary(title)
-            content = wikipedia.page(title).content
         except:
             continue
         queue += [link for link in links if link[:1].isalpha()]
-        with open("corpus/{0:03d}-{1}.txt".format(len(scraped), slugify(title)), 'a') as file:
-            file.write(title)
-            file.write("\n")
+        with open("corpus/{0:05d}-{1}.txt".format(len(scraped), slugify(title)), 'a') as file:
             file.write(summary)
-            file.write("\n")
-            file.write(content)
-            file.write("\n\n")
         print("{} {}".format(title, len(queue)))
 
 
