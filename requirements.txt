@@ -1,0 +1,6 @@
+boltons==21.0.0
+gensim==4.0.1
+numpy==1.21.0
+python-Levenshtein==0.12.2
+scipy==1.7.0
+smart-open==5.1.0
