@@ -1,3 +1,5 @@
 .venv
-corpus/
+.idea
+.DS_Store
+corpus
 *.bz2
